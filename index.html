@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Falcon Consulting - Your trusted consulting partner.">
+    <title>Falcon Consulting</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header>
+        <div class="header-left">
+            <h1>Falcon Consulting</h1>
+        </div>
+        <div class="header-right">
+            <div class="tabs">
+                <div class="tab active" onclick="showContent('about')">About Us</div>
+                <div class="tab" onclick="showContent('services')">Our Services</div>
+                <div class="tab" onclick="showContent('contact')">Contact Us</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content Sections -->
+    <div class="content active" id="about">
+        <section>
+            <h2>About Us</h2>
+            <p>Falcon Consulting offers expert business advice and innovative solutions for small and medium-sized businesses. At Falcon Consulting, we are a passionate, knowledge-driven, and creative global organization dedicated to providing innovative talent solutions. Trusted by some of the world’s leading companies across various industries, we are your go-to partner for all your talent acquisition needs. Our clients rely on us for fast, reliable, and global service delivery.</p>
+            <p>Ready to elevate your business with top talent? Get in touch with us today!</p>
+        </section>
+    </div>
+
+    <div class="content" id="services">
+        <section>
+            <h2>Our Services</h2>
+            <div class="service-boxes">
+                <div class="service-box">
+                    <h3>Career Assessment</h3>
+                    <p>We help you uncover your strengths, weaknesses, interests, and values, matching them with potential career paths and industries tailored to your unique profile.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Career Counselling</h3>
+                    <p>Our personalized one-on-one guidance will assist you in setting clear career goals, creating a strategic roadmap, and successfully navigating the job market with confidence.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Skill Development & Training</h3>
+                    <p>Through tailored training programs, workshops, and learning resources, we help you develop new skills and enhance existing ones, empowering you for career success.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Job Search Resources</h3>
+                    <p>Gain access to essential job search tools, including job boards, resume builders, and interview preparation guides to give you the competitive edge.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Networking Opportunities</h3>
+                    <p>Expand your professional network by connecting with industry leaders, experts, and mentors through exclusive events, programs, and online communities.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="content" id="contact">
+        <section>
+            <h2>Contact Us</h2>
+            <p>Ready to take your business to the next level? Get in touch with us today.</p>
+            
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Falcon Consulting. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showContent(contentId) {
+            // Hide all content
+            const contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Show the clicked content
+            document.getElementById(contentId).classList.add('active');
+
+            // Add active class to the clicked tab
+            const activeTab = document.querySelector(`[onclick="showContent('${contentId}')"]`);
+            activeTab.classList.add('active');
+        }
+    </script>
+</body>
+</html>
